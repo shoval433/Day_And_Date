@@ -1,0 +1,21 @@
+version: '3'
+services:
+  nginx:
+      build: ./nginx
+      ports:
+          - "80:80"
+      networks:
+      - net_app
+      # That the server will come up only after the application
+      depends_on:
+        - app
+  app:
+    build: .
+    # Maps the application to port 8080
+    ports:
+      - "8080:5000"
+    networks:
+      - net_app
+
+networks:
+  net_app:
