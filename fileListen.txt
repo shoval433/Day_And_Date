@@ -1,2 +1,2 @@
-Today is Monday
-The current date is 27.02.2023
+Today is [DAY_OF_WEEK]
+The current date is [CURRENT_DATE]
